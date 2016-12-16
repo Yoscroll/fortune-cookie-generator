@@ -1,0 +1,18 @@
+#fortune-cookie-text{
+  height: 50px;
+  width: 100px;
+  background-color: lightgreen;
+  padding: 5px;
+  border: 5px solid black;
+  margin: 5px;
+}
+button{
+  margin: 5px;
+}
+#previous-fortunes{
+  background-color: salmon;
+  height: auto;
+  width: 200px;
+  border: 5px solid black;
+  margin: 5px;
+}
