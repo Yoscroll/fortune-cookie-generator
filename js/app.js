@@ -1,18 +1,4 @@
-var fortunesList = ["A secret admirer will soon show how they feel", 
-"The more you give, the more you'll have", 
-"Hard work pays off" ,
-"Don't give up" ,
-"The one you love is closer than you think" ,
-"It's time to make new friends" ,
-"Stay focused" ,
-"Good times are coming your way" ,
-"Stay patient and you will be rewarded" ,
-"Something you lost will soon turn up" ,
-"A great surprise is in store for you",
-"Your hidden talents will soon be revealed",
-"Your life will be happy and peaceful" ,
-"A quiet evening with friends is the best cure for a long day", 
-"Happy news is on its way" ];
+var fortunesList = ["you're rich","you're poor","you're going to ace all your classes","you have infinite cash"];
 
 var fortunesToSay=[];
 function resetList(){
@@ -21,9 +7,9 @@ function resetList(){
 	}
 }
 resetList();
-
 var fortune=null;
 function generateFortuneCookie() {
+	document.getElementById('onlyButton').innerHTML="Click Again!";
 	var box = document.getElementById('fortune-cookie-text');
 	var list = document.getElementById('list');
 	var li = document.createElement("li");
@@ -43,9 +29,10 @@ function generateFortuneCookie() {
 	}
 	else{
 		resetList();
+		fortune=null;
 		generateFortuneCookie();
 	}
 	console.log(fortunesToSay);
 	console.log(fortunesList);
-	box.innerHTML = fortune;
+	box.innerHTML = "<b>Fortunes</b> <br><br>"+fortune;
 }
